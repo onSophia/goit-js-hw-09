@@ -2,16 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 7</title>
+    <link rel="stylesheet" href="./css/common.css" />
 </head>
 
 <body>
-    <script src="./js/task-1.js"></script>
-    <script src="./js/task-2.js"></script>
-    <script src="./js/task-3.js"></script>
-    <script src="./js/task-4.js"></script>
+    <section class="task-section">
+        <ul id="categories">
+            <li class="item">
+                <h2>Animals</h2>
+                <ul>
+                    <li>Cat</li>
+                    <li>Hamster</li>
+                    <li>Horse</li>
+                    <li>Parrot</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Products</h2>
+                <ul>
+                    <li>Bread</li>
+                    <li>Parsley</li>
+                    <li>Cheese</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <hr />
+
+    <section class="task-section">
+        <ul class="gallery"></ul>
+    </section>
+
+    <hr />
+
+    <section class="task-section">
+        <input type="text" id="name-input" placeholder="Please enter your name" />
+        <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    </section>
+
+    <hr />
+
+    <section class="task-section">
+        <form class="login-form">
+            <label>
+                Email
+                <input type="email" name="email" />
+            </label>
+            <label>
+                Password
+                <input type="password" name="password" />
+            </label>
+            <button type="submit">Log in</button>
+        </form>
+    </section>
+
+    <hr />
+
+    <section class="task-section widget-section">
+        <div class="widget">
+            <p>Background color: <span class="color">-</span></p>
+            <button type="button" class="change-color">Change color</button>
+        </div>
+    </section>
+
+    <script src="./js/task-1.js" type="module"></script>
+    <script src="./js/task-2.js" type="module"></script>
+    <script src="./js/task-3.js" type="module"></script>
+    <script src="./js/task-4.js" type="module"></script>
+    <script src="./js/task-5.js" type="module"></script>
 </body>
 
 </html>

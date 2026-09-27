@@ -1,26 +1,39 @@
-const getUsersWithFriend = (users, friendName) =>
-  users.filter(user => user.friends.includes(friendName));
-
-const allUsers = [
-  { name: "Moore Hensley", friends: ["Sharron Pace"] },
-  { name: "Sharlene Bush", friends: ["Briana Decker", "Sharron Pace"] },
-  { name: "Ross Vazquez", friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"] },
-  { name: "Elma Head", friends: ["Goldie Gentry", "Aisha Tran"] },
-  { name: "Carey Barr", friends: ["Jordan Sampson", "Eddie Strong"] },
-  { name: "Blackburn Dotson", friends: ["Jacklyn Lucas", "Linda Chapman"] },
-  { name: "Sheree Anthony", friends: ["Goldie Gentry", "Briana Decker"] }
+const images = [
+  {
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
+    alt: "Alpine Spring Meadows",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
+    alt: "Nature Landscape",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+    alt: "Lighthouse Coast Sea",
+  },
 ];
 
-console.log(getUsersWithFriend(allUsers, "Briana Decker"));
-// [
-//   { name: "Sharlene Bush", friends: ["Briana Decker", "Sharron Pace"] },
-//   { name: "Sheree Anthony", friends: ["Goldie Gentry", "Briana Decker"] }
-// ]
+const gallery = document.querySelector('.gallery');
 
-console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
-// [
-//   { name: "Elma Head", friends: ["Goldie Gentry", "Aisha Tran"] },
-//   { name: "Sheree Anthony", friends: ["Goldie Gentry", "Briana Decker"] }
-// ]
+const galleryMarkup = images
+  .map(
+    ({ url, alt }) =>
+      `<li class="gallery-item">
+        <img src="${url}" alt="${alt}" class="gallery-image">
+      </li>`
+  )
+  .join('');
 
-console.log(getUsersWithFriend(allUsers, "Adrian Cross")); // []
+gallery.insertAdjacentHTML('beforeend', galleryMarkup);
