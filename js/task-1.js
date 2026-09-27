@@ -1,6 +1,5 @@
 const getUserNames = users => users.map(user => user.name);
 
-// Перевірка
 console.log(
   getUserNames([
     {
