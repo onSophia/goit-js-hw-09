@@ -10,6 +10,17 @@ body {
     color: #2e2f42;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
 ul {
     list-style: none;
     padding: 0;
